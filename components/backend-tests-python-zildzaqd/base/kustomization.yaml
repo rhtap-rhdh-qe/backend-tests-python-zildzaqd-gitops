@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: backend-tests-python-zildzaqd
+  janus-idp.io/tekton: backend-tests-python-zildzaqd
+  backstage.io/kubernetes-id: backend-tests-python-zildzaqd
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-python-zildzaqd
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
